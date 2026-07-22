@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>innerHTML Example</title>
+</head>
+
+<body>
+
+    <div id="box"></div>
+
+    <button onclick="showData()">
+        Show Data
+    </button>
+
+    <script>
+function showData() {
+
+    let box = document.getElementById("box");
+
+    box.innerHTML = `
+        <h2>Welcome Ashu</h2>
+        <p>Learning DOM</p>
+        <button>Click Me</button>
+    `;
+
+}
+
+</script>
+
+</body>
+
+</html>

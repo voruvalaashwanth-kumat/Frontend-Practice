@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE mobil[
+<!ELEMENT mobil (price, year, model)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT model (#PCDATA)>
+]>
+<mobil>
+<price>12000</price>
+<year>2026</year>
+<model>redmi</model>
+</mobil> 

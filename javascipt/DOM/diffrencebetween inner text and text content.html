@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<h1 id="demo">
+    Welcome
+    <span style="display:none;">Ashu</span>
+</h1>
+
+<button onclick="checkText()">
+    Check
+</button>
+
+<script >
+function checkText() {
+
+    let data = document.getElementById("demo");
+
+    console.log("innerText : " + data.innerText);
+
+    console.log("textContent : " + data.textContent);
+
+}
+</script>
+
+</body>
+
+</html>

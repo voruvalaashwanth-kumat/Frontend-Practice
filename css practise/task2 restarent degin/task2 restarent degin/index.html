@@ -1,0 +1,430 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<title>GOLDEN LEAF RESTAURANT</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="hero">
+
+<nav>
+<a href="#hero">Home</a>
+
+<a href="#vegmenu">Menu</a>
+
+<a href="#gallery">Gallery</a>
+
+<a href="#about">About</a>
+
+<a href="#contact">Contact</a>
+<span id="cart" onclick="showCart()">
+🛒 Cart : <span id="cartCount">0</span>
+</span>
+<button id="checkoutBtn" onclick="checkout()">
+Checkout
+</button>
+
+
+</nav>
+
+<div id="content">
+
+<h1>Golden Leaf Restaurant</h1>
+
+<h2>Experience the Taste of Happiness</h2>
+
+<p>Fresh Food | Healthy Food | Delicious Food</p>
+
+<p>
+Enjoy delicious food prepared with fresh ingredients and served with love.
+</p>
+<button id="menuBtn">View Menu</button>
+
+<button id="bookBtn">Book Table</button>
+
+</div>
+
+</div>
+
+<section id="vegmenu">
+
+<h1> Vegetarian Special Menu</h1>
+
+<p>Fresh and Healthy Dishes Prepared With Love</p>
+<input
+type="text"
+id="searchFood"
+placeholder="🔍 Search Food"
+onkeyup="searchFood()">
+
+<div class="menu">
+
+<div class="card" data-name="veg pizza">
+<img src="pizza.jpg">
+<h2>Veg Pizza</h2>
+<p>₹199</p>
+<div class="rating">
+
+<span onclick="rateFood(this,1)">☆</span>
+
+<span onclick="rateFood(this,2)">☆</span>
+
+<span onclick="rateFood(this,3)">☆</span>
+
+<span onclick="rateFood(this,4)">☆</span>
+
+<span onclick="rateFood(this,5)">☆</span>
+
+</div>
+
+<p class="ratingText">No Rating</p>
+
+<button class="orderBtn" onclick="orderFood('Veg Pizza',199)">
+Order Now
+</button>
+</div>
+
+<div class="card" data-name="veg burger">
+<img src="burger.jpg">
+<h2>Veg Burger</h2>
+<p>₹149</p>
+<div class="rating">
+
+<span onclick="rateFood(this,1)">☆</span>
+<span onclick="rateFood(this,2)">☆</span>
+<span onclick="rateFood(this,3)">☆</span>
+<span onclick="rateFood(this,4)">☆</span>
+<span onclick="rateFood(this,5)">☆</span>
+
+</div>
+
+<p class="ratingText">No Rating</p>
+
+
+<button class="orderBtn" onclick="orderFood('Veg Burger',149)">
+Order Now
+</button>
+</div>
+
+<div class="card" data-name="masala dosa">
+<img src="dosa.jpg">
+<h2>Masala Dosa</h2>
+<p>₹129</p>
+<div class="rating">
+
+<span onclick="rateFood(this,1)">☆</span>
+<span onclick="rateFood(this,2)">☆</span>
+<span onclick="rateFood(this,3)">☆</span>
+<span onclick="rateFood(this,4)">☆</span>
+<span onclick="rateFood(this,5)">☆</span>
+
+</div>
+
+<p class="ratingText">No Rating</p>
+<button class="orderBtn" onclick="orderFood('Masala Dosa',129)">
+Order Now
+</button>
+
+</div>
+
+<div class="card" data-name="pasta">
+<img src="pasta.jpg">
+<h2>Pasta</h2>
+<p>₹179</p>
+<div class="rating">
+
+<span onclick="rateFood(this,1)">☆</span>
+<span onclick="rateFood(this,2)">☆</span>
+<span onclick="rateFood(this,3)">☆</span>
+<span onclick="rateFood(this,4)">☆</span>
+<span onclick="rateFood(this,5)">☆</span>
+
+</div>
+
+<p class="ratingText">No Rating</p>
+<button class="orderBtn" onclick="orderFood('Pasta',179)">
+Order Now
+</button>
+</div>
+<div class="card" data-name="noodles">
+
+<img src="noodles.jpg">
+<h2>Noodles</h2>
+<p>₹169</p>
+<div class="rating">
+
+<span onclick="rateFood(this,1)">☆</span>
+<span onclick="rateFood(this,2)">☆</span>
+<span onclick="rateFood(this,3)">☆</span>
+<span onclick="rateFood(this,4)">☆</span>
+<span onclick="rateFood(this,5)">☆</span>
+
+</div>
+
+<p class="ratingText">No Rating</p>
+<button class="orderBtn" onclick="orderFood('Noodles',169)">
+Order Now
+</button>
+
+</div>
+
+
+<div class="card" data-name="paneer curry">
+<img src="panner.jpg">
+<h2>Paneer Curry</h2>
+<p>₹249</p>
+<div class="rating">
+
+<span onclick="rateFood(this,1)">☆</span>
+<span onclick="rateFood(this,2)">☆</span>
+<span onclick="rateFood(this,3)">☆</span>
+<span onclick="rateFood(this,4)">☆</span>
+<span onclick="rateFood(this,5)">☆</span>
+
+</div>
+
+<p class="ratingText">No Rating</p>
+<button class="orderBtn" onclick="orderFood('Paneer Curry',249)">
+Order Now
+</button>
+</div>
+
+</div>
+
+</section>
+<section id="nonvegmenu">
+
+<h1>Non Vegetarian Special Menu</h1>
+<p>Fresh and Healthy Dishes Prepared With Love</p>
+
+<div class="menu">
+
+<div class="card" data-name="chicken biryani">
+<img src="chikenbiryani.jpg.png">
+<h2>Chicken Biryani</h2>
+<p>₹219</p>
+<div class="rating">
+
+<span onclick="rateFood(this,1)">☆</span>
+<span onclick="rateFood(this,2)">☆</span>
+<span onclick="rateFood(this,3)">☆</span>
+<span onclick="rateFood(this,4)">☆</span>
+<span onclick="rateFood(this,5)">☆</span>
+
+</div>
+
+<p class="ratingText">No Rating</p>
+<button class="orderBtn" onclick="orderFood('Chicken Biryani',219)">
+Order Now
+</button>
+</div>
+
+<div class="card" data-name="tandoori chicken">
+<img src="tandoori chiken.png">
+<h2>Tandoori Chicken</h2>
+<p>₹250</p>
+<div class="rating">
+
+<span onclick="rateFood(this,1)">☆</span>
+<span onclick="rateFood(this,2)">☆</span>
+<span onclick="rateFood(this,3)">☆</span>
+<span onclick="rateFood(this,4)">☆</span>
+<span onclick="rateFood(this,5)">☆</span>
+
+</div>
+
+<p class="ratingText">No Rating</p>
+<button class="orderBtn" onclick="orderFood('Tandoori Chicken',250)">
+Order Now
+</button>
+</div>
+
+<div class="card" data-name="prawns fry">
+<img src="prawansfry.png">
+<h2>Prawns Fry</h2>
+<p>₹299</p>
+<div class="rating">
+
+<span onclick="rateFood(this,1)">☆</span>
+<span onclick="rateFood(this,2)">☆</span>
+<span onclick="rateFood(this,3)">☆</span>
+<span onclick="rateFood(this,4)">☆</span>
+<span onclick="rateFood(this,5)">☆</span>
+
+</div>
+
+<p class="ratingText">No Rating</p>
+<button class="orderBtn" onclick="orderFood('Prawns Fry',299)">
+Order Now
+</button>
+</div>
+
+<div class="card" data-name="mutton biryani">
+<img src="muttonbiryani.png">
+<h2>mutton Biryani</h2>
+<p>₹349</p>
+<div class="rating">
+
+<span onclick="rateFood(this,1)">☆</span>
+<span onclick="rateFood(this,2)">☆</span>
+<span onclick="rateFood(this,3)">☆</span>
+<span onclick="rateFood(this,4)">☆</span>
+<span onclick="rateFood(this,5)">☆</span>
+
+</div>
+
+<p class="ratingText">No Rating</p>
+<button class="orderBtn" onclick="orderFood('Mutton Biryani',349)">
+Order Now
+</button>
+</div>
+
+<div class="card" data-name="fish fry">
+<img src="fishfry.png">
+<h2>Fish Fry</h2>
+<p>₹199</p>
+<div class="rating">
+
+<span onclick="rateFood(this,1)">☆</span>
+<span onclick="rateFood(this,2)">☆</span>
+<span onclick="rateFood(this,3)">☆</span>
+<span onclick="rateFood(this,4)">☆</span>
+<span onclick="rateFood(this,5)">☆</span>
+
+</div>
+
+<p class="ratingText">No Rating</p>
+<button class="orderBtn" onclick="orderFood('Fish Fry',199)">
+Order Now
+</button>
+</div>
+
+<div class="card" data-name="egg biryani">
+<img src="eggbiryani.png">
+<h2>Egg Biryani</h2>
+<p>₹169</p>
+<div class="rating">
+
+<span onclick="rateFood(this,1)">☆</span>
+<span onclick="rateFood(this,2)">☆</span>
+<span onclick="rateFood(this,3)">☆</span>
+<span onclick="rateFood(this,4)">☆</span>
+<span onclick="rateFood(this,5)">☆</span>
+
+</div>
+
+<p class="ratingText">No Rating</p>
+<button class="orderBtn" onclick="orderFood('Egg Biryani',169)">
+Order Now
+</button>
+</div>
+
+</div>
+
+</section>
+<section id="gallery">
+
+<h1> Food Gallery</h1>
+
+<p>
+Take a look at our delicious dishes and chef's special creations.
+</p>
+
+<div class="gallery-container">
+
+<img src="pizza.jpg">
+
+<img src="burger.jpg">
+
+<img src="dosa.jpg">
+
+<img src="pasta.jpg">
+
+<img src="noodles.jpg">
+
+<img src="panner.jpg">
+
+<img src="chikenbiryani.jpg.png">
+
+<img src="muttonbiryani.png">
+
+<img src="fishfry.png">
+
+</div>
+
+</section>
+<section id="about">
+
+<h1>🌿 Our Story</h1>
+
+<p>
+Welcome to Golden Leaf Restaurant, where every dish is prepared with passion, freshness, and quality ingredients. Our mission is to provide delicious food and unforgettable dining experiences for every customer.
+
+We believe that food is not just a meal but a way to bring people together. From traditional recipes to modern flavors, our chefs carefully prepare every dish with love and dedication.
+
+Whether you are enjoying a family dinner, celebrating a special occasion, or simply satisfying your cravings, Golden Leaf Restaurant is the perfect place to enjoy great food in a warm and friendly atmosphere.
+</p>
+
+</section>
+<section id="booking">
+
+<h1> Book Your Table</h1>
+
+<p>
+Reserve your table and enjoy a wonderful dining experience with us.
+</p>
+
+<form id="bookingForm">
+
+<input type="text" id ="name" placeholder="Enter Your Name">
+
+<input type="email" id="email" placeholder="Enter Your Email">
+
+<input type="tel" id="phone" placeholder="Enter Your Phone Number">
+<input type="date" id="date">
+
+<input type="time" id="time">
+<input type="number" id="guests" placeholder="Number of Guests">
+
+<textarea  id="request" placeholder="Special Request"></textarea>
+<button id="bookNowBtn" type="submit">Book Now</button>
+
+</form>
+
+</section>
+<section id="contact">
+
+<h1> Contact Us</h1>
+
+<p> Location: Hyderabad, India</p>
+
+<p> Email: goldenleaf@gmail.com</p>
+
+<p>Phone: +91 9390527274</p>
+
+<p> Timings: 10:00 AM - 11:00 PM</p>
+
+</section>
+<footer>
+
+<h2>🌿 Golden Leaf Restaurant 🌿</h2>
+
+<p>Serving Happiness With Every Meal</p>
+
+<p>© 2026 Golden Leaf Restaurant. All Rights Reserved.</p>
+
+</footer>
+<div id="imagePopup">
+
+<span id="closePopup">&times;</span>
+
+<img id="popupImage">
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

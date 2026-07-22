@@ -1,0 +1,17 @@
+<html>
+<body>
+
+<script>
+
+let a = [10,20];
+
+let b = [30,40];
+
+let c = [...a,...b];
+
+document.write(c);
+
+</script>
+
+</body>
+</html>

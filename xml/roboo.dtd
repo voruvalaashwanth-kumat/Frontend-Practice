@@ -1,0 +1,5 @@
+<!DOCTYPE mobil[
+<!ELEMENT mobil (price, year, model)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT model (#PCDATA)>
+]>

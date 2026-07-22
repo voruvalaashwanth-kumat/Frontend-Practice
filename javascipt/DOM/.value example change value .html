@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Change Input Value</title>
+</head>
+
+<body>
+
+    <h2>Change Input Value Example</h2>
+
+    <input
+        type="text"
+        id="username"
+        placeholder="Enter Your Name">
+
+    <br><br>
+
+    <button onclick="changeValue()">
+        Change Value
+    </button>
+
+    <script>
+function changeValue() {
+
+    let inputBox = document.getElementById("username");
+
+    inputBox.value = "Ashwanth Kumar";
+
+}
+</script>
+
+</body>
+
+</html>

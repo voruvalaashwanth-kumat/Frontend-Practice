@@ -1,0 +1,103 @@
+body{
+margin:0;
+padding:0;
+font-family:Arial, sans-serif;
+}
+
+#hero{
+height:100vh;
+background-image:url("restarent2.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+text-align:center;
+}
+
+nav{
+padding-top:20px;
+
+}
+
+
+nav a{
+text-decoration:none;
+background-color:#C19A6B;
+color:white;
+font-size:20px;
+font-weight:bold;
+
+padding:12px 25px;
+
+border:2px solid white;
+
+border-radius:30px;
+
+
+margin:10px;
+}
+
+#content{
+padding-top:200px;
+}
+
+#content h1{
+color:white;
+font-size:70px;
+}
+
+#content h2{
+color:white;
+font-size:35px;
+}
+
+#content p{
+color:white;
+font-size:22px;
+}
+
+button{
+padding:15px 30px;
+font-size:18px;
+border:none;
+border-radius:10px;
+margin:10px;
+cursor:pointer;
+}
+#vegmenu{
+background-color:#2B1B17;
+color:white;
+text-align:center;
+padding:60px;
+}
+
+#vegmenu h1{
+font-size:45px;
+color:#F4D77B;
+}
+
+#vegmenu p{
+font-size:20px;
+}
+<!-- VEG MENU STARTS HERE -->
+.card{
+background-color:#3B2A24;
+padding:20px;
+border-radius:25px;
+border:3px solid #C19A6B;
+}.card img{
+width:40%;
+height:250px;
+object-fit:cover;
+border-radius:20px;
+border:3px solid #F4D77B;
+}
+.card h2{
+color:#F4D77B;
+}.card p{
+color:white;
+font-size:22px;
+font-weight:bold;
+}.card:hover{
+transform:scale(1.05);
+transition:0.5s;
+}

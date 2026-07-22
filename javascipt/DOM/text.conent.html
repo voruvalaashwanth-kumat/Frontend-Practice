@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>textContent Example</title>
+</head>
+
+<body>
+
+    <h1 id="title">
+        Welcome Ashu
+        <span style="display:none;">Hidden Text</span>
+    </h1>
+
+    <button onclick="showText()">
+        Show Text
+    </button>
+
+    <script >function showText() {
+
+    let heading = document.getElementById("title");
+
+    console.log(heading.textContent);
+
+}
+</script>
+
+</body>
+
+</html>

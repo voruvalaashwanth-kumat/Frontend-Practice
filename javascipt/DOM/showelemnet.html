@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Show Element</title>
+</head>
+
+<body>
+
+    <h1 id="heading" style="display:none;">
+        Welcome Ashu
+    </h1>
+
+    <button onclick="showHeading()">
+        Show
+    </button>
+
+    <script>
+
+        function showHeading() {
+
+            let heading = document.getElementById("heading");
+
+            heading.style.display = "block";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
