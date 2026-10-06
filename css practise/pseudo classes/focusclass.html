@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Focus Pseudo-Class</title>
+
+    <style>
+
+        /*
+        CSS Pseudo-Class: :focus
+
+        :focus is used to style an element
+        when the user selects or focuses on that element.
+
+        It is commonly used with input fields.
+
+        When the user clicks inside the input box,
+        the input gets focus and the :focus style is applied.
+        */
+
+        input {
+            padding: 10px;
+            border: 2px solid gray;
+        }
+
+        /*
+        :focus applies this style
+        when the input field is selected.
+        */
+
+        input:focus {
+            border: 2px solid blue;
+            outline: none;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <input type="text" placeholder="Enter your name">
+
+</body>
+</html>

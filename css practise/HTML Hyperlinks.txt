@@ -1,0 +1,222 @@
+HTML Hyperlinks
+
+HTML lo hyperlink anedi oka webpage nunchi vere webpage, vere website, same webpage lo oka particular section, email address, phone number, file, or downloadable resource ki user ni navigate cheyyadaniki use chese clickable connection. Simple ga cheppalante, website lo manam oka text or image meeda click chesinappudu vere location ki vellagaligite danini hyperlink antam. Hyperlinks create cheyyadaniki HTML lo <a> (anchor) element use chestham. Anchor element lo href (Hypertext Reference) attribute use chesi link ekkadiki vellalo specify chestham. User <a> element lopala unna visible text or content meeda click chesinappudu browser href lo unna destination ni open chestundi. Hyperlink anedi website navigation lo chala important because websites lo different pages and resources ni connect cheyyadaniki hyperlinks main role play chestayi. Example ki Home page nunchi About page ki, About page nunchi Contact page ki, website nunchi Google lanti external website ki velladaniki hyperlinks use chestham.
+
+Basic Hyperlink Example
+<a href="https://www.google.com">Visit Google</a>
+
+Ikkada <a> anchor element. href attribute lo https://www.google.com destination URL. Visit Google user ki screen meeda kanipinche clickable text. User Visit Google meeda click chesthe Google website open avtundi.
+
+1. External Hyperlink
+
+Oka website nunchi vere external website ki velladaniki external hyperlink use chestham.
+
+<a href="https://www.google.com">Google</a>
+
+Ikkada mana webpage nunchi Google website ki navigation jarugutundi. href lo complete URL undi kabatti idi external link.
+
+2. Internal Hyperlink
+
+Same website/project lo unna another HTML page ki navigate cheyyadaniki internal hyperlink use chestham.
+
+Suppose mana project:
+
+website/
+│
+├── index.html
+├── about.html
+└── contact.html
+
+index.html lo:
+
+<a href="about.html">About Us</a>
+
+User About Us click chesthe about.html page open avtundi.
+
+Ikkada complete https://... URL ivvaledu. Mana project lo unna file name icham. Anduke idi internal/local page link.
+
+3. New Tab lo Open Cheyyadam
+
+Konni situations lo link click chesinappudu current page close kakunda new browser tab lo website open cheyyali. Appudu target="_blank" use chestham.
+
+<a href="https://www.google.com" target="_blank">
+    Open Google
+</a>
+
+Ikkada target="_blank" browser ki link ni new tab/window context lo open cheyyamani request chestundi. User original webpage ni current tab lo continue cheyyagaladu.
+
+4. Same Page Section ki Hyperlink
+
+Oka long webpage lo user ni same page lo particular section ki direct ga teesukelladaniki fragment link use cheyyachu.
+
+<a href="#contact">Go to Contact</a>
+
+<h2 id="contact">Contact Us</h2>
+
+Ikkada href="#contact" lo #contact anedi destination element yokka id ni refer chestundi. User Go to Contact click chesthe browser same page lo id="contact" unna element daggariki scroll avtundi.
+
+Complete example:
+
+<h1>My Website</h1>
+
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+
+<h2 id="about">About Us</h2>
+<p>We create websites.</p>
+
+<h2 id="contact">Contact Us</h2>
+<p>Email us for more information.</p>
+
+Ikkada About click chesthe About section ki, Contact click chesthe Contact section ki vellachu.
+
+5. Email Hyperlink
+
+User click chesinappudu email application open ayi email compose cheyyadaniki mailto: use chestham.
+
+<a href="mailto:example@gmail.com">
+    Send Email
+</a>
+
+Ikkada mailto: browser ki idi normal webpage URL kaadu, email address ani indicate chestundi. User click chesthe device/browser configuration batti available email application open avvachu.
+
+6. Phone Number Hyperlink
+
+Mobile devices lo user direct ga phone call start cheyyadaniki tel: use chestham.
+
+<a href="tel:+919876543210">
+    Call Us
+</a>
+
+Ikkada tel: phone number link ani indicate chestundi. Mobile device lo user click chesthe calling interface open avvachu.
+
+7. Download Hyperlink
+
+Oka file ni download cheyyadaniki anchor element tho download attribute use cheyyachu.
+
+Example:
+
+<a href="resume.pdf" download>
+    Download Resume
+</a>
+
+Suppose mana project lo:
+
+website/
+│
+├── index.html
+└── resume.pdf
+
+resume.pdf same project/location lo available unte browser aa resource ni access chesi download cheyyadaniki try chestundi.
+
+Ikkada important point enti ante download attribute server ni create cheyyadu. File local ga available unte separate internet server compulsory kaadu. File remote server lo unte obviously network/server access avasaram untundi, and browser security/server response rules kuda download behavior ni affect cheyyachu.
+
+8. Image as Hyperlink
+
+Hyperlink ki text matrame compulsory kaadu. Image ni kuda clickable link ga create cheyyachu.
+
+<a href="https://www.google.com">
+    <img src="google-logo.png" alt="Google">
+</a>
+
+Ikkada image <a> element lopala undi. User image meeda click chesthe Google website ki navigate avtadu.
+
+So:
+
+<a>
+   ↓
+<img>
+
+Image itself clickable content avtundi.
+
+9. Button-like Link
+
+Anchor element ni CSS tho button laga style cheyyachu.
+
+<a href="about.html">Learn More</a>
+
+CSS:
+
+a {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+Ikkada actual element still <a> hyperlink. CSS valla adi button laga kanipistundi.
+
+❤️ Hyperlink lo main 2 things
+
+Basic hyperlink ni gurthupettukovadaniki:
+
+<a href="https://www.google.com">
+    Google
+</a>
+<a>
+
+Idi Anchor element. Hyperlink create cheyyadaniki use chestham.
+
+href
+
+Idi Hypertext Reference. Link destination ekkada undo specify chestundi.
+
+Google
+
+Idi user ki kanipinche clickable content.
+
+So:
+
+<a>        → Link create chestundi
+href       → Link ekkadiki vellalo cheptundi
+Text/Image → User click chese content
+❤️ Complete Example
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hyperlinks</title>
+</head>
+
+<body>
+
+    <h1>My Website</h1>
+
+    <a href="about.html">About Us</a>
+    <br><br>
+
+    <a href="https://www.google.com" target="_blank">
+        Visit Google
+    </a>
+    <br><br>
+
+    <a href="#contact">
+        Go to Contact
+    </a>
+    <br><br>
+
+    <a href="mailto:example@gmail.com">
+        Send Email
+    </a>
+    <br><br>
+
+    <a href="tel:+919876543210">
+        Call Us
+    </a>
+    <br><br>
+
+    <a href="resume.pdf" download>
+        Download Resume
+    </a>
+
+    <h2 id="contact">Contact Us</h2>
+
+    <p>You can contact us through email or phone.</p>
+
+</body>
+</html>
+
+Ikkada manam external link, internal page link, new-tab link, same-page section link, email link, phone link, download link anni okate example lo chusam.
+
+❤️ Final ga exam/interview lo cheppalante:
+
+A hyperlink in HTML is a clickable connection that allows users to navigate from one webpage or resource to another webpage, website, section, email address, phone number, or file. Hyperlinks are created using the <a> anchor element, and the href attribute specifies the destination of the link. Hyperlinks are an important part of web navigation because they connect different pages and resources and make websites easy for users to navigate.

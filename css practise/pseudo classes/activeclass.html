@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Active Pseudo-Class</title>
+
+    <style>
+
+        /*
+        CSS Pseudo-Class: :active
+
+        :active is used to style an element
+        when the user is actively pressing or clicking it.
+
+        For example, when we press a button,
+        the :active style is applied.
+
+        When we release the mouse button,
+        the :active state ends.
+        */
+
+        button {
+            background-color: gray;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+        }
+
+        /*
+        :active applies this style
+        while the button is being pressed.
+        */
+
+        button:active {
+            background-color: red;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <button>Click Me</button>
+
+</body>
+</html>
